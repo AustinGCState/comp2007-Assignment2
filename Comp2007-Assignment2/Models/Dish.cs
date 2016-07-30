@@ -22,6 +22,9 @@ namespace Comp2007_Assignment2.Models
 
             this.Pokemon = Pokemon;
         }
+
+        public int DishID { get; set; }
+
         public string Pokemon { get; set; }
 
         public Types Type { get; set; }

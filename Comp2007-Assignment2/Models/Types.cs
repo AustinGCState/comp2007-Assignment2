@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using System.Linq;
 using System.Web;
 
@@ -21,7 +22,7 @@ namespace Comp2007_Assignment2.Models
         public Types(string Name){
             this.Name = Name;       
             }
-
+        public int TypeID { get; set; }
         public string Name { get; set; }
     }
 }
