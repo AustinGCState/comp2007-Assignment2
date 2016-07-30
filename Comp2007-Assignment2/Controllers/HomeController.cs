@@ -10,6 +10,8 @@ namespace Comp2007_Assignment2.Controllers
     {
         public ActionResult Index()
         {
+
+            
             return View();
         }
 
