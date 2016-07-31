@@ -9,8 +9,8 @@ namespace Comp2007_Assignment2.Models
     public class PokemonBytesContext : DbContext
     {
         public virtual DbSet<Type> Types { get; set; }
-        public virtual DbSet<Dish> Dish { get; set; }
-        public virtual DbSet<Ingredients> Ingredients { get; set; }
+        public virtual DbSet<Dish> Dishs { get; set; }
+        public virtual DbSet<Ingredient> Ingredients { get; set; }
 
     }
 }

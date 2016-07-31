@@ -27,7 +27,7 @@ namespace Comp2007_Assignment2.Models
 
         public string Pokemon { get; set; }
 
-        public Types Type { get; set; }
+        public Type Types { get; set; }
 
     }
 }

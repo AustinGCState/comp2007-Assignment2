@@ -7,7 +7,7 @@ using System.Web;
 namespace Comp2007_Assignment2.Models
 {
 
-    public class Ingredients
+    public class Ingredient
     {
 
         public int IngredientID { get; set; }

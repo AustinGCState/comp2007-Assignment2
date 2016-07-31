@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using System.Linq;
 using System.Web;
 
 namespace Comp2007_Assignment2.Models
 {
-    public class Types
+    public class Type
     {
         /// <summary>
         /// This is the empty constructor
         /// </summary>
-        public Types(){
+        public Type(){
             
             }
 
@@ -19,7 +18,7 @@ namespace Comp2007_Assignment2.Models
         /// This Constructor takes one parameter - Name
         /// </summary>
         /// <param name="Name"></param>
-        public Types(string Name){
+        public Type(string Name){
             this.Name = Name;       
             }
         public int TypeID { get; set; }
