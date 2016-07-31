@@ -18,16 +18,24 @@ namespace Comp2007_Assignment2.Models
         /// This Constructor takes one parameter - Pokemon
         /// </summary>
         /// <param name="Pokemon"></param>
-        public Dish(String Pokemon) {
+        public Dish(String PokemonId) {
 
-            this.Pokemon = Pokemon;
+            this.PokemonId = PokemonId;
         }
 
         public int DishID { get; set; }
 
-        public string Pokemon { get; set; }
+        public string PokemonId { get; set; }
+
+        public string Name { get; set; }
+
+        public decimal Price { get; set; }
+
+        public string DishImageUrl { get; set; }
 
         public Type Types { get; set; }
+
+        public Pokemon Pokemon { get; set; }
 
     }
 }

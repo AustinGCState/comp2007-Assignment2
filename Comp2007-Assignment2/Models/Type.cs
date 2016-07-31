@@ -23,5 +23,7 @@ namespace Comp2007_Assignment2.Models
             }
         public int TypeID { get; set; }
         public string Name { get; set; }
+        public string description { get; set; }
+        public List<Dish> Dishs { get; set; }
     }
 }
