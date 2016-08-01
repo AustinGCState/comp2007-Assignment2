@@ -21,7 +21,7 @@ namespace Comp2007_Assignment2.Controllers
         [AllowAnonymous]
         public async Task<ActionResult> Index()
         {
-            return View(await db.Ingredients.ToListAsync());
+            return View(await db.Ingredient.ToListAsync());
         }
 
         // GET: Ingredients/Details/5
@@ -31,7 +31,7 @@ namespace Comp2007_Assignment2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Ingredient ingredient = await db.Ingredients.FindAsync(id);
+            Ingredient ingredient = await db.Ingredient.FindAsync(id);
             if (ingredient == null)
             {
                 return HttpNotFound();
@@ -54,7 +54,7 @@ namespace Comp2007_Assignment2.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Ingredients.Add(ingredient);
+                db.Ingredient.Add(ingredient);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
@@ -69,7 +69,7 @@ namespace Comp2007_Assignment2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Ingredient ingredient = await db.Ingredients.FindAsync(id);
+            Ingredient ingredient = await db.Ingredient.FindAsync(id);
             if (ingredient == null)
             {
                 return HttpNotFound();
@@ -100,7 +100,7 @@ namespace Comp2007_Assignment2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Ingredient ingredient = await db.Ingredients.FindAsync(id);
+            Ingredient ingredient = await db.Ingredient.FindAsync(id);
             if (ingredient == null)
             {
                 return HttpNotFound();
@@ -113,8 +113,8 @@ namespace Comp2007_Assignment2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            Ingredient ingredient = await db.Ingredients.FindAsync(id);
-            db.Ingredients.Remove(ingredient);
+            Ingredient ingredient = await db.Ingredient.FindAsync(id);
+            db.Ingredient.Remove(ingredient);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }

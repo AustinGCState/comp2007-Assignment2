@@ -21,9 +21,9 @@ namespace Comp2007_Assignment2.Models
         public Type(string Name){
             this.Name = Name;       
             }
-        public int TypeID { get; set; }
-        public string Name { get; set; }
-        public string description { get; set; }
-        public List<Dish> Dishs { get; set; }
+        public virtual int TypeID { get; set; }
+        public virtual string Name { get; set; }
+        public virtual string description { get; set; }
+        public virtual List<Dish> Dishs { get; set; }
     }
 }

@@ -23,19 +23,19 @@ namespace Comp2007_Assignment2.Models
             this.PokemonId = PokemonId;
         }
 
-        public int DishID { get; set; }
+        public virtual int DishID { get; set; }
 
-        public string PokemonId { get; set; }
+        public virtual string PokemonId { get; set; }
 
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
-        public decimal Price { get; set; }
+        public virtual double Price { get; set; }
 
-        public string DishImageUrl { get; set; }
+        public virtual string DishImageUrl { get; set; }
 
-        public Type Types { get; set; }
+        public virtual Type Types { get; set; }
 
-        public Pokemon Pokemon { get; set; }
+        public virtual Pokemon Pokemon { get; set; }
 
     }
 }
