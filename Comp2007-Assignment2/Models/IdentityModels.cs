@@ -21,7 +21,7 @@ namespace Comp2007_Assignment2.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("enterprise2.Enterprise2.0.dbo", throwIfV1Schema: false)
         {
         }
 
