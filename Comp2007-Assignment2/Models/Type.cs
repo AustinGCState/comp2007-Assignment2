@@ -24,6 +24,6 @@ namespace Comp2007_Assignment2.Models
         public virtual int TypeID { get; set; }
         public virtual string Name { get; set; }
         public virtual string description { get; set; }
-        public virtual List<Dish> Dishs { get; set; }
+        public virtual List<Dish> Dishes { get; set; }
     }
 }

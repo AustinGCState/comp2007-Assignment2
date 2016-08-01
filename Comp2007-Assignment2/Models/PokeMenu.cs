@@ -6,11 +6,11 @@ using System.Data.Entity;
 
 namespace Comp2007_Assignment2.Models
 {
-    public class Pokemenu : DropCreateDatabaseIfModelChanges<PokemonBytesContext>
+    public class Pokemenu : DropCreateDatabaseAlways<PokemonBytesContext>
     {
         protected override void Seed(PokemonBytesContext context)
         {
-            var type = new List<Type>
+            var Types = new List<Type>
             {
                 new Type { Name = "Fire" },
                 new Type { Name = "Water" },
@@ -23,7 +23,7 @@ namespace Comp2007_Assignment2.Models
                 new Type { Name = "Normal" },
             };
 
-            var pokemon = new List<Pokemon>
+            var Pokemons = new List<Pokemon>
             {
                 new Pokemon { Name = "Bulbasaur" },
                 new Pokemon { Name = "Charmander" },
@@ -40,18 +40,18 @@ namespace Comp2007_Assignment2.Models
 
             new List<Dish>
             {
-                new Dish { Name = "Spicy En'Charmad'as", Types = type.Single(t => t.Name == "Fire"), Price = 8.99, Pokemon = pokemon.Single(p => p.Name == "Charmander"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
-                new Dish { Name = "Flareon Fettuccini", Types = type.Single(t => t.Name == "Fire"), Price = 8.99, Pokemon = pokemon.Single(p => p.Name == "Flareon"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
-                new Dish { Name = "Bubble Blast Soup", Types = type.Single(t => t.Name == "Water"), Price = 8.99, Pokemon = pokemon.Single(p => p.Name == "Squirtle"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
-                new Dish { Name = "Vine Whipped Salad", Types = type.Single(t => t.Name == "Grass"), Price = 8.99, Pokemon = pokemon.Single(p => p.Name == "Bulbasaur"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
-                new Dish { Name = "IceBeam Icecream", Types = type.Single(t => t.Name == "Ice"), Price = 8.99, Pokemon = pokemon.Single(p => p.Name == "Lapras"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
-                new Dish { Name = "Earthquake Pound Cake", Types = type.Single(t => t.Name == "Ground"), Price = 8.99, Pokemon = pokemon.Single(p => p.Name == "Sandshrew"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
-                new Dish { Name = "Stone Edge Martini", Types = type.Single(t => t.Name == "Rock"), Price = 8.99, Pokemon = pokemon.Single(p => p.Name == "Geodude"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
-                new Dish { Name = "Pika Pizza", Types = type.Single(t => t.Name == "Electic"), Price = 8.99, Pokemon = pokemon.Single(p => p.Name == "Pikachu"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
-                new Dish { Name = "Cursed Panini", Types = type.Single(t => t.Name == "Ghost"), Price = 8.99, Pokemon = pokemon.Single(p => p.Name == "Ghastly"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
-                new Dish { Name = "Tail Whip Tacos", Types = type.Single(t => t.Name == "Normal"), Price = 8.99, Pokemon = pokemon.Single(p => p.Name == "Rattata"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
+                new Dish { Name = "Spicy En'Charmad'as", Type = Types.Single(t => t.Name == "Fire"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Charmander"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
+                new Dish { Name = "Flareon Fettuccini", Type = Types.Single(t => t.Name == "Fire"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Flareon"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
+                new Dish { Name = "Bubble Blast Soup", Type = Types.Single(t => t.Name == "Water"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Squirtle"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
+                new Dish { Name = "Vine Whipped Salad", Type = Types.Single(t => t.Name == "Grass"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Bulbasaur"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
+                new Dish { Name = "IceBeam Icecream", Type = Types.Single(t => t.Name == "Ice"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Lapras"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
+                new Dish { Name = "Earthquake Pound Cake", Type = Types.Single(t => t.Name == "Ground"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Sandshrew"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
+                new Dish { Name = "Stone Edge Martini", Type = Types.Single(t => t.Name == "Rock"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Geodude"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
+                new Dish { Name = "Pika Pizza", Type = Types.Single(t => t.Name == "Electic"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Pikachu"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
+                new Dish { Name = "Cursed Panini", Type = Types.Single(t => t.Name == "Ghost"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Ghastly"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
+                new Dish { Name = "Tail Whip Tacos", Type = Types.Single(t => t.Name == "Normal"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Rattata"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
 
-            }.ForEach(d => context.Dishs.Add(d));
+            }.ForEach(d => context.Dishes.Add(d));
         }
     }
 }

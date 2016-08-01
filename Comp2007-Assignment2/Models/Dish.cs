@@ -35,7 +35,7 @@ namespace Comp2007_Assignment2.Models
 
         public virtual string DishImageUrl { get; set; }
 
-        public virtual Type Types { get; set; }
+        public virtual Type Type { get; set; }
 
         public virtual Pokemon Pokemon { get; set; }
 
