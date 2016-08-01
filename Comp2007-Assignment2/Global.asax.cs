@@ -13,7 +13,7 @@ namespace Comp2007_Assignment2
         protected void Application_Start()
         {
             System.Data.Entity.Database.SetInitializer(
-            new Comp2007_Assignment2.Models.PokeMenu());
+            new Comp2007_Assignment2.Models.Pokemenu());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

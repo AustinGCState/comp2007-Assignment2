@@ -12,9 +12,9 @@ namespace Comp2007_Assignment2.Models
         {
         }
 
-        public virtual DbSet<Dish> Dish { get; set; }
+        public virtual DbSet<Dish> Dishs { get; set; }
         public virtual DbSet<Type> Types { get; set; }
-        public virtual DbSet<Pokemon> Pokemons { get; set; }
+        public virtual DbSet<Pokemon> Pokemon { get; set; }
         public virtual DbSet<Ingredient> Ingredient { get; set; }
     }
 }
