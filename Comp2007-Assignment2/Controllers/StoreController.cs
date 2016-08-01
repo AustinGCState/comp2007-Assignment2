@@ -7,25 +7,20 @@ using Comp2007_Assignment2.Models;
 
 namespace Comp2007_Assignment2.Controllers
 {
-    [Authorize]
     public class StoreController : Controller
     {
+
+        PokemonBytesContext storeDB = new PokemonBytesContext();
         //
         // GET: /Store/
-        [AllowAnonymous]
         public ActionResult Index()
         {
-            List<Models.Type> type = new List<Models.Type>
-             {
-        new Models.Type ("Fire"),
-        new Models.Type ("Water"),
-        new Models.Type ("Grass")
-    };
-            return View(type);
+            List<Comp2007_Assignment2.Models.Type> types = storeDB.Types.ToList(); 
+            return View(types);
         }
         //
         // GET: /Store/Browse?dish=
-        [AllowAnonymous]
+ 
         public ActionResult Browse(string type)
         {
             {
@@ -34,7 +29,7 @@ namespace Comp2007_Assignment2.Controllers
             }
         }
         // GET: /Store/Details/5
-        [AllowAnonymous]
+
         public ActionResult Details(int id = 1)
         {
             Dish dish = new Dish("Dish " + id);

@@ -1,5 +1,5 @@
 ﻿@using Comp2007_Assignment2.Models
-@model IEnumerable<Types>
+@model IEnumerable<Comp2007_Assignment2.Models.Type>
 
 @{
     ViewBag.Title = "Index";
@@ -12,7 +12,7 @@
                           types:
                       </p>
                       <ul>
-                          @foreach (Types item in Model)
+                          @foreach (Comp2007_Assignment2.Models.Type item in Model)
                           {
 
                           <li>@Html.ActionLink(item.Name,"Browse", new {type=item.Name})</li>
