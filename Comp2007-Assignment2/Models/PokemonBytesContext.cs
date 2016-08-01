@@ -8,7 +8,7 @@ namespace Comp2007_Assignment2.Models
     public partial class PokemonBytesContext : DbContext
     {
         public PokemonBytesContext()
-            : base("name=PokemonBytesConnection")
+            : base("name=enterprise2.Enterprise2.0.dbo")
         {
         }
 
