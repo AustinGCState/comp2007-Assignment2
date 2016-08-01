@@ -15,6 +15,6 @@
                           @foreach (Comp2007_Assignment2.Models.Type item in Model)
                           {
 
-                          <li>@Html.ActionLink(item.Name,"Browse", new {type=item.Name})</li>
+                          <li>@Html.ActionLink(item.Name,"Browse", new {types=item.Name})</li>
                           }
                       </ul>

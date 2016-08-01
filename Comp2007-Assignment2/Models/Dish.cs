@@ -27,6 +27,8 @@ namespace Comp2007_Assignment2.Models
 
         public virtual string PokemonId { get; set; }
 
+        public virtual int TypeId { get; set; }
+
         public virtual string Name { get; set; }
 
         public virtual double Price { get; set; }
