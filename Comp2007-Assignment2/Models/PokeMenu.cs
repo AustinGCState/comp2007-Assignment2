@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace Comp2007_Assignment2.Models
 {
-    public class Pokemenu : DropCreateDatabaseAlways<PokemonBytesContext>
+    public class Pokemenu : DropCreateDatabaseIfModelChanges<PokemonBytesContext>
     {
         protected override void Seed(PokemonBytesContext context)
         {
@@ -47,8 +47,8 @@ namespace Comp2007_Assignment2.Models
                 new Dish { Name = "IceBeam Icecream", Type = Types.Single(t => t.Name == "Ice"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Lapras"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
                 new Dish { Name = "Earthquake Pound Cake", Type = Types.Single(t => t.Name == "Ground"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Sandshrew"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
                 new Dish { Name = "Stone Edge Martini", Type = Types.Single(t => t.Name == "Rock"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Geodude"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
-                new Dish { Name = "Pika Pizza", Type = Types.Single(t => t.Name == "Electic"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Pikachu"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
-                new Dish { Name = "Cursed Panini", Type = Types.Single(t => t.Name == "Ghost"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Ghastly"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
+                new Dish { Name = "Pika Pizza", Type = Types.Single(t => t.Name == "Electric"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Pikachu"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
+                new Dish { Name = "Cursed Panini", Type = Types.Single(t => t.Name == "Ghost"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Gastly"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
                 new Dish { Name = "Tail Whip Tacos", Type = Types.Single(t => t.Name == "Normal"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Rattata"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
 
             }.ForEach(d => context.Dishes.Add(d));
