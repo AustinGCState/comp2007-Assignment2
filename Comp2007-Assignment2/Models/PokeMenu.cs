@@ -11,6 +11,8 @@ namespace Comp2007_Assignment2.Models
         protected override void Seed(PokemonBytesContext context)
         {
             var Types = new List<Type>
+
+            //Pokemon types for users to choose food style
             {
                 new Type { Name = "Fire" },
                 new Type { Name = "Water" },
