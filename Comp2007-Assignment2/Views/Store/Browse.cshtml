@@ -10,7 +10,7 @@
         @foreach (Dish dish in Model.Dishes)
         {
         <li>
-        @Html.ActionLink(dish.Name,"Details", new {id = dish.DishID});
+        @Html.ActionLink(dish.Name,"Details", new {id = dish.DishID})
         </li>
         }
 

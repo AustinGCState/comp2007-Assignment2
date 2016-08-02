@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace Comp2007_Assignment2.Models
 {
-    public class Pokemenu : DropCreateDatabaseAlways<PokemonBytesContext>
+    public class Pokemenu : DropCreateDatabaseIfModelChanges<PokemonBytesContext>
     {
         protected override void Seed(PokemonBytesContext context)
         {
