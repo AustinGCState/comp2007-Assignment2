@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace Comp2007_Assignment2.Models
 {
-    public class Pokemenu : DropCreateDatabaseIfModelChanges<PokemonBytesContext>
+    public class Pokemenu : DropCreateDatabaseAlways<PokemonBytesContext>
     {
         protected override void Seed(PokemonBytesContext context)
         {
@@ -40,6 +40,7 @@ namespace Comp2007_Assignment2.Models
 
             };
 
+            // Github Fix
             new List<Dish>
             {
                 new Dish { Name = "Spicy En'Charmad'as", Type = Types.Single(t => t.Name == "Fire"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Charmander"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
