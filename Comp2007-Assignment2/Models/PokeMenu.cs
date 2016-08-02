@@ -24,7 +24,7 @@ namespace Comp2007_Assignment2.Models
                 new Type { Name = "Ghost" },
                 new Type { Name = "Normal" },
             };
-
+            //List of pokemon for users to then pick dish based on their favorite pokemon
             var Pokemons = new List<Pokemon>
             {
                 new Pokemon { Name = "Bulbasaur" },
