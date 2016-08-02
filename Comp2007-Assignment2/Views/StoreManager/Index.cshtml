@@ -7,9 +7,10 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+
+    <a href="@Url.Action("Create")" class="btn btn-default" title="Create"><i class="fa fa-plus"></i></a>
 </p>
-<table class="table">
+<table class="table table-condensed">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Type.Name)
@@ -47,9 +48,9 @@
             @Html.DisplayFor(modelItem => item.DishImageUrl)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.DishID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.DishID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.DishID })
+            <a href="@Url.Action("Edit", new {id = item.DishID})" class="btn btn-default" title="Edit"><i class="fa fa-pencil"></i></a>
+            <a href="@Url.Action("Details", new {id = item.DishID})" class="btn btn-default" title="Info"><i class="fa fa-info"></i></a>
+            <a href="@Url.Action("Delete", new {id = item.DishID})" class="btn btn-default" title="Delete"><i class="fa fa-trash"></i></a>
         </td>
     </tr>
 }
