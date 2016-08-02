@@ -15,14 +15,17 @@ namespace Comp2007_Assignment2.Controllers
         // GET: /Store/
         public ActionResult Index()
         {
-            List<Comp2007_Assignment2.Models.Type> types = storeDB.Types.ToList(); 
-            return View(types);
+            List<Comp2007_Assignment2.Models.Type> type = storeDB.Types.ToList(); 
+            return View(type);
         }
         //
         // GET: /Store/Browse?dish=
  
-        public ActionResult Browse(string type = "Fire")
+        public ActionResult Browse(string type)
         {
+            if(type == null){
+                type = "Water";
+            }
             {
                 Models.Type typeModel = storeDB.Types.Include("Dishes").Single(t => t.Name == type);
                 return View(typeModel);

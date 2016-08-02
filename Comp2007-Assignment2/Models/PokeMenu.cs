@@ -43,10 +43,10 @@ namespace Comp2007_Assignment2.Models
             // Github Fix
             new List<Dish>
             {
-                new Dish { Name = "Spicy En'Charmad'as", Type = Types.Single(t => t.Name == "Fire"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Charmander"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
-                new Dish { Name = "Flareon Fettuccini", Type = Types.Single(t => t.Name == "Fire"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Flareon"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
-                new Dish { Name = "Bubble Blast Soup", Type = Types.Single(t => t.Name == "Water"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Squirtle"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
-                new Dish { Name = "Vine Whipped Salad", Type = Types.Single(t => t.Name == "Grass"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Bulbasaur"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
+                new Dish { Name = "Spicy En'Charmad'as", Type = Types.Single(t => t.Name == "Fire"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Charmander"), DishImageUrl = "~/Assets/images/Pokeball.PNG" },
+                new Dish { Name = "Flareon Fettuccini", Type = Types.Single(t => t.Name == "Fire"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Flareon"), DishImageUrl = "~/Assets/images/Pokeball.PNG" },
+                new Dish { Name = "Bubble Blast Soup", Type = Types.Single(t => t.Name == "Water"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Squirtle"), DishImageUrl = "~/Assets/images/Pokeball.PNG" },
+                new Dish { Name = "Vine Whipped Salad", Type = Types.Single(t => t.Name == "Grass"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Bulbasaur"), DishImageUrl = "~/Assets/images/Pokeball.PNG" },
                 new Dish { Name = "IceBeam Icecream", Type = Types.Single(t => t.Name == "Ice"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Lapras"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
                 new Dish { Name = "Earthquake Pound Cake", Type = Types.Single(t => t.Name == "Ground"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Sandshrew"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
                 new Dish { Name = "Stone Edge Martini", Type = Types.Single(t => t.Name == "Rock"), Price = 8.99, Pokemon = Pokemons.Single(p => p.Name == "Geodude"), DishImageUrl = "/Assets/images/Pokeball.PNG" },
