@@ -21,10 +21,10 @@ namespace Comp2007_Assignment2.Controllers
         //
         // GET: /Store/Browse?dish=
  
-        public ActionResult Browse(string type)
+        public ActionResult Browse(string type = "Fire")
         {
             {
-                Models.Type typeModel = new Models.Type (type);
+                Models.Type typeModel = storeDB.Types.Include("Dishes").Single(t => t.Name == type);
                 return View(typeModel);
             }
         }
@@ -32,7 +32,7 @@ namespace Comp2007_Assignment2.Controllers
 
         public ActionResult Details(int id = 1)
         {
-            Dish dish = new Dish("Dish " + id);
+            Dish dish = storeDB.Dishes.Find(id);
             return View(dish);
         }
     }

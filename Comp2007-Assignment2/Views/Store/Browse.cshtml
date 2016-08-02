@@ -6,4 +6,14 @@
 }
 
 <h2>Browsing Pokemon Types: @Model.Name</h2>
+<ul>
+        @foreach (Dish dish in Model.Dishes)
+        {
+        <li>
+        @dish.Name
+        </li>
+        }
+
+
+</ul>
 
